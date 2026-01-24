@@ -16,3 +16,12 @@ vim.api.nvim_create_autocmd("UILeave", {
     io.write("\027]111\027\\")
   end,
 })
+
+-- Disable smooth scrolling
+vim.g.snacks_animate = false
+
+-- Disable VimTeX from opening PDF during compilation
+vim.g.vimtex_view_automatic = 0
+
+-- Disable italics
+-- vim.api.nvim_set_hl(0, "Comment", { italic = false })
