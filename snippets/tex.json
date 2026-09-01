@@ -1,0 +1,471 @@
+{
+  "Template": {
+    "prefix": [
+      "template",
+      "\\template"
+    ],
+    "body": [
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\documentclass{article}",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\usepackage{geometry}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{amssymb}",
+      "\\usepackage{amsmath}",
+      "\\usepackage{amsthm}",
+      "\\usepackage{empheq}",
+      "\\usepackage{mdframed}",
+      "\\usepackage{booktabs}",
+      "\\usepackage{lipsum}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{color}",
+      "\\usepackage{psfrag}",
+      "\\usepackage{pgfplots}",
+      "\\usepackage{bm}",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "${3:% Other Settings}",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\geometry{a4paper}",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\definecolor{ocre}{RGB}{243,102,25}",
+      "\\definecolor{mygray}{RGB}{243,243,244}",
+      "\\definecolor{deepGreen}{RGB}{26,111,0}",
+      "\\definecolor{shallowGreen}{RGB}{235,255,255}",
+      "\\definecolor{deepBlue}{RGB}{61,124,222}",
+      "\\definecolor{shallowBlue}{RGB}{235,249,255}",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\newcommand\\orangebox[1]{\\fcolorbox{ocre}{mygray}{\\hspace{1em}#1\\hspace{1em}}}",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}",
+      "\\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}",
+      "\\theoremstyle{mytheoremstyle}",
+      "\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]",
+      "\\theoremstyle{mytheoremstyle}",
+      "\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]",
+      "\\theoremstyle{myproblemstyle}",
+      "\\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\usepgfplotslibrary{colorbrewer}",
+      "\\pgfplotsset{width=8cm,compat=1.9}",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "\\title{${1:Title}}",
+      "\\author{${2:Haoyun Qin}}",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "",
+      "\\begin{document}",
+      "    \\maketitle",
+      "    $0",
+      "\\end{document}"
+    ],
+    "description": "Use the default template which includes a variety of packages and declared-commands. The template will also automatically generate the title and author, as well as date, and will formate the document."
+  },
+  "Display math": {
+    "scope": "tex, latex",
+    "prefix": "dm",
+    "body": "$$$1$$$0"
+  },
+  "Inline math": {
+    "scope": "tex, latex",
+    "prefix": "mk",
+    "body": "$$1$$0"
+  },
+  "Inline display style": {
+    "scope": "tex, latex",
+    "prefix": "ds",
+    "body": "$\\displaystyle $1$$0"
+  },
+  "GCD": {
+    "scope": "tex, latex",
+    "prefix": "gcd",
+    "body": "\\gcd"
+  },
+  "Exists": {
+    "scope": "tex, latex",
+    "prefix": "exists",
+    "body": "\\exists"
+  },
+  "Congruence": {
+    "scope": "tex, latex",
+    "prefix": "congr",
+    "body": "\\equiv"
+  },
+  "Non-congruence": {
+    "scope": "tex, latex",
+    "prefix": "ncongr",
+    "body": "\\not\\equiv"
+  },
+  "Overline": {
+    "scope": "tex, latex",
+    "prefix": "Bar",
+    "body": "\\overline{$1}$0"
+  },
+  "Intersection": {
+    "scope": "tex, latex",
+    "prefix": "cap",
+    "body": "\\cap"
+  },
+  "Union": {
+    "scope": "tex, latex",
+    "prefix": "cup",
+    "body": "\\cup"
+  },
+  "Greater than or equal to": {
+    "scope": "tex, latex",
+    "prefix": "geq",
+    "body": "\\geq"
+  },
+  "Text": {
+    "scope": "tex, latex",
+    "prefix": "text",
+    "body": "\\text{ $1 }$0"
+  },
+  "Code": {
+    "scope": "tex, latex",
+    "prefix": "code",
+    "body": "\\texttt{$1}$0"
+  },
+  "Square": {
+    "scope": "tex, latex",
+    "prefix": "sr",
+    "body": "^{2}"
+  },
+  "Cube": {
+    "scope": "tex, latex",
+    "prefix": "cb",
+    "body": "^{3}"
+  },
+  "Power": {
+    "scope": "tex, latex",
+    "prefix": "rd",
+    "body": "^{$1}$0"
+  },
+  "Subscript": {
+    "scope": "tex, latex",
+    "prefix": "_",
+    "body": "_{$1}$0"
+  },
+  "Subscript Text": {
+    "scope": "tex, latex",
+    "prefix": "sts",
+    "body": "_\\text{$1}"
+  },
+  "Square Root": {
+    "scope": "tex, latex",
+    "prefix": "sqrt",
+    "body": "\\sqrt{ $1 }$0"
+  },
+  "Exponential": {
+    "scope": "tex, latex",
+    "prefix": "ee",
+    "body": "e^{ $1 }$0"
+  },
+  "Inverse": {
+    "scope": "tex, latex",
+    "prefix": "invs",
+    "body": "^{-1}"
+  },
+  "Hat": {
+    "scope": "tex, latex",
+    "prefix": "hat",
+    "body": "\\hat{$1}$0"
+  },
+  "Bar": {
+    "scope": "tex, latex",
+    "prefix": "bar",
+    "body": "\\bar{$1}$0"
+  },
+  "Ddot": {
+    "scope": "tex, latex",
+    "prefix": "ddot",
+    "body": "\\ddot{$1}$0"
+  },
+  "Tilde": {
+    "scope": "tex, latex",
+    "prefix": "tilde",
+    "body": "\\tilde{$1}$0"
+  },
+  "Underline": {
+    "scope": "tex, latex",
+    "prefix": "und",
+    "body": "\\underline{$1}$0"
+  },
+  "Vector": {
+    "scope": "tex, latex",
+    "prefix": "vec",
+    "body": "\\vec{$1}$0"
+  },
+  "X_n": {
+    "scope": "tex, latex",
+    "prefix": "xnn",
+    "body": "x_{n}"
+  },
+  "X_i": {
+    "scope": "tex, latex",
+    "prefix": "\\xii",
+    "body": "x_{i}"
+  },
+  "X_j": {
+    "scope": "tex, latex",
+    "prefix": "xjj",
+    "body": "x_{j}"
+  },
+  "X_n+1": {
+    "scope": "tex, latex",
+    "prefix": "xp1",
+    "body": "x_{n+1}"
+  },
+  "Y_n": {
+    "scope": "tex, latex",
+    "prefix": "ynn",
+    "body": "y_{n}"
+  },
+  "Y_i": {
+    "scope": "tex, latex",
+    "prefix": "yii",
+    "body": "y_{i}"
+  },
+  "Y_j": {
+    "scope": "tex, latex",
+    "prefix": "yjj",
+    "body": "y_{j}"
+  },
+  "Infinity": {
+    "scope": "tex, latex",
+    "prefix": "ooo",
+    "body": "\\infty"
+  },
+  "Limit": {
+    "scope": "tex, latex",
+    "prefix": "lim",
+    "body": "\\lim_{ ${1:n} \\to ${2:\\infty} } $0"
+  },
+  "Plus or minus": {
+    "scope": "tex, latex",
+    "prefix": "+-",
+    "body": "\\pm"
+  },
+  "Minus or plus": {
+    "scope": "tex, latex",
+    "prefix": "-+",
+    "body": "\\mp"
+  },
+  "Vertical dots": {
+    "scope": "tex, latex",
+    "prefix": "vdots",
+    "body": "\\vdots"
+  },
+  "Times": {
+    "scope": "tex, latex",
+    "prefix": "xx",
+    "body": "\\times"
+  },
+  "Cdot": {
+    "scope": "tex, latex",
+    "prefix": "*.",
+    "body": "\\cdot"
+  },
+  "Parallel": {
+    "scope": "tex, latex",
+    "prefix": "para",
+    "body": "\\parallel"
+  },
+  "Equivalent": {
+    "scope": "tex, latex",
+    "prefix": "===",
+    "body": "\\equiv"
+  },
+  "Not equal": {
+    "scope": "tex, latex",
+    "prefix": "!=",
+    "body": "\\neq"
+  },
+  "Not equal (word)": {
+    "scope": "tex, latex",
+    "prefix": "neq",
+    "body": "\\neq"
+  },
+  "Less than or equal (word)": {
+    "scope": "tex, latex",
+    "prefix": "leq",
+    "body": "\\leq"
+  },
+  "Greater than or equal": {
+    "scope": "tex, latex",
+    "prefix": ">=",
+    "body": "\\geq"
+  },
+  "Less than or equal": {
+    "scope": "tex, latex",
+    "prefix": "<=",
+    "body": "\\leq"
+  },
+  "Much greater": {
+    "scope": "tex, latex",
+    "prefix": ">>",
+    "body": "\\gg"
+  },
+  "Much less": {
+    "scope": "tex, latex",
+    "prefix": "<<",
+    "body": "\\ll"
+  },
+  "Left right": {
+    "scope": "tex, latex",
+    "prefix": "<->",
+    "body": "\\leftrightarrow "
+  },
+  "To (arrow)": {
+    "scope": "tex, latex",
+    "prefix": "->",
+    "body": "\\to"
+  },
+  "To (word)": {
+    "scope": "tex, latex",
+    "prefix": "to",
+    "body": "\\to"
+  },
+  "Maps to": {
+    "scope": "tex, latex",
+    "prefix": "!>",
+    "body": "\\mapsto"
+  },
+  "Implies (arrow)": {
+    "scope": "tex, latex",
+    "prefix": "=>",
+    "body": "\\implies"
+  },
+  "Implies (word)": {
+    "scope": "tex, latex",
+    "prefix": "implies",
+    "body": "\\implies"
+  },
+  "Implied by": {
+    "scope": "tex, latex",
+    "prefix": "=<",
+    "body": "\\impliedby"
+  },
+  "And": {
+    "scope": "tex, latex",
+    "prefix": "and",
+    "body": "\\cap"
+  },
+  "Or": {
+    "scope": "tex, latex",
+    "prefix": "orr",
+    "body": "\\cup"
+  },
+  "In": {
+    "scope": "tex, latex",
+    "prefix": "inn",
+    "body": "\\in"
+  },
+  "Not in": {
+    "scope": "tex, latex",
+    "prefix": "notin",
+    "body": "\\not\\in"
+  },
+  "Set minus": {
+    "scope": "tex, latex",
+    "prefix": "\\\\\\",
+    "body": "\\setminus"
+  },
+  "Subset equal (arrow)": {
+    "scope": "tex, latex",
+    "prefix": "sub=",
+    "body": "\\subseteq"
+  },
+  "Subset equal (word)": {
+    "scope": "tex, latex",
+    "prefix": "subset",
+    "body": "\\subseteq"
+  },
+  "Empty set": {
+    "scope": "tex, latex",
+    "prefix": "eset",
+    "body": "\\emptyset"
+  },
+  "Set": {
+    "scope": "tex, latex",
+    "prefix": "set",
+    "body": "\\left{ $1 \\right}$0"
+  },
+  "Big L": {
+    "scope": "tex, latex",
+    "prefix": "LL",
+    "body": "\\mathcal{L}"
+  },
+  "Big H": {
+    "scope": "tex, latex",
+    "prefix": "HH",
+    "body": "\\mathcal{H}"
+  },
+  "Big C": {
+    "scope": "tex, latex",
+    "prefix": "CC",
+    "body": "\\mathbb{C}"
+  },
+  "Big R": {
+    "scope": "tex, latex",
+    "prefix": "RR",
+    "body": "\\mathbb{R}"
+  },
+  "Big Z": {
+    "scope": "tex, latex",
+    "prefix": "ZZ",
+    "body": "\\mathbb{Z}"
+  },
+  "Big N": {
+    "scope": "tex, latex",
+    "prefix": "NN",
+    "body": "\\mathbb{N}"
+  },
+  "PMatrix": {
+    "scope": "tex, latex",
+    "prefix": "pmat",
+    "body": [
+      "\\begin{pmatrix}",
+      " $0",
+      "\\end{pmatrix}"
+    ],
+    "description": "Matrix with parenthesis"
+  },
+  "Bold Letters": {
+    "scope": "tex, latex",
+    "prefix": "*b",
+    "body": "\\textbf{$0}",
+    "description": "Makes text bold"
+  },
+  "Italic Letters": {
+    "scope": "tex, latex",
+    "prefix": "*i",
+    "body": "\\textit{$0}",
+    "description": "Makes text italic"
+  },
+  "Coding Letters": {
+    "scope": "tex, latex",
+    "prefix": "*c",
+    "body": "\\texttt{$0}",
+    "description": "Makes text in code font"
+  },
+  "->": {
+    "scope": "tex, latex",
+    "prefix": "->",
+    "body": [
+      "\\to"
+    ],
+    "description": "-> symbol"
+  }
+}
