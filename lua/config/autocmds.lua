@@ -5,4 +5,31 @@
 -- with `vim.api.nvim_create_autocmd`
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
--- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- vim.api.nvim_create_autocmd("LspAttach", {
+--   callback = function(args)
+--     if vim.bo[args.buf].filetype ~= "java" then
+--       return
+--     end
+--
+--     vim.schedule(function()
+--       if vim.api.nvim_buf_is_valid(args.buf) then
+--         vim.lsp.inlay_hint.enable(false, {
+--           bufnr = args.buf,
+--         })
+--       end
+--     end)
+--   end,
+-- })
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.java",
+--   callback = function()
+--     -- Increase timeout_ms to give jdtls time to respond
+--     vim.lsp.buf.format({
+--       timeout_ms = 5000,
+--       filter = function(client)
+--         return client.name == "intellij"
+--       end,
+--     })
+--   end,
+-- })
+vim.lsp.enable("jdtls", false)
