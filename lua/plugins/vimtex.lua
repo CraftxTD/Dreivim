@@ -1,7 +1,8 @@
 return {
   {
     "lervag/vimtex",
-    lazy = false, -- load immediately when opening .tex files
+    ft = { "tex", "plaintex" },
+    lazy = true, -- load immediately when opening .tex files
     init = function()
       -- Basic VimTeX configuration
       vim.g.vimtex_compiler_method = "latexmk"

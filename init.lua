@@ -25,3 +25,7 @@ vim.g.vimtex_view_automatic = 0
 
 -- Disable italics
 -- vim.api.nvim_set_hl(0, "Comment", { italic = false })
+-- Path
+vim.env.PATH = vim.env.PATH .. [[;C:\Users\andre\AppData\Local\opam\default\bin]]
+-- OCaml Formatter
+vim.opt.runtimepath:prepend([[C:\Users\andre\AppData\Local\opam\default\share\ocp-indent\vim]])
