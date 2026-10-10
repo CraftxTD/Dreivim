@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 --
 --
+vim.keymap.set("n", "<leader>C", "<cmd>ConformInfo<cr>", { desc = "Conform Info" })
