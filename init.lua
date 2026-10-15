@@ -29,3 +29,20 @@ vim.g.vimtex_view_automatic = 0
 vim.env.PATH = vim.env.PATH .. [[;C:\Users\andre\AppData\Local\opam\default\bin]]
 -- OCaml Formatter
 vim.opt.runtimepath:prepend([[C:\Users\andre\AppData\Local\opam\default\share\ocp-indent\vim]])
+
+vim.api.nvim_create_autocmd("FileType", {
+
+  pattern = "typst",
+
+  callback = function()
+    vim.opt_local.backupcopy = "yes"
+  end,
+})
+
+vim.lsp.config("tinymist", {
+
+  settings = {
+
+    exportPdf = "onType",
+  },
+})
